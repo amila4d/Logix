@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_freight_forwarder_home"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_home_shipping_container_company_home"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_home_importer_exporter_home"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Search" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Notifications" />
+
+        <item
+            android:id="@+id/nav_consignment_details"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Consignment details" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Chat messages" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Logout" />
+    </group>
+</menu>

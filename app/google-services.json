@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "952956083090",
+    "firebase_url": "https://logixmessaging.firebaseio.com",
+    "project_id": "logixmessaging",
+    "storage_bucket": "logixmessaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952956083090:android:c47def96634a359a47bf4b",
+        "android_client_info": {
+          "package_name": "com.logistics.logix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952956083090-8np5pnavqlh3971fp0ehq7n9ts5d8vie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.logistics.logix",
+            "certificate_hash": "749c2fd0e938f124f977987ad5dc46c70262b310"
+          }
+        },
+        {
+          "client_id": "952956083090-2pa6b1kfn48t03llogdm6jhqrhf5elnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4wUXQMgC-juy8kTN4URURFAFrd6xuLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952956083090-2pa6b1kfn48t03llogdm6jhqrhf5elnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

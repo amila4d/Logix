@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home_freight_forwarder_home">
+
+    <!--<fragment
+        android:id="@+id/nav_home"
+        android:name="com.logistics.logix.ui.freightForwarderHome.FreightForwarderHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_freight_forwarder_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>-->
+    <!--<fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.logistics.logix.ui.freightForwarderHome.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/nav_home_freight_forwarder_home"
+        android:name="com.logistics.logix.ui.freightForwarderHome.FreightForwarderHomeFragment"
+        android:label="Freight forwarder"
+        tools:layout="@layout/fragment_freight_forwarder_home" />
+
+    <fragment
+        android:id="@+id/nav_home_importer_exporter_home"
+        android:name="com.logistics.logix.ui.importerExporterHome.ImporterExporterHomeFragment"
+        android:label="Importer exporter"
+        tools:layout="@layout/fragment_importer_exporter_home" />
+
+    <fragment
+        android:id="@+id/nav_home_shipping_container_company_home"
+        android:name="com.logistics.logix.ui.shippingContainerCompanyHome.ShippingContainerCompanyHomeFragment"
+        android:label="Shipping container company"
+        tools:layout="@layout/fragment_shipping_container_company_home" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.logistics.logix.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.logistics.logix.ui.notification.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/nav_consignment_details"
+        android:name="com.logistics.logix.ui.consignmentDetails.ConsignmentDetailsFragment"
+        android:label="Consignment detail"
+        tools:layout="@layout/fragment_consignment_details" />
+
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.logistics.logix.ui.chat.ChatFragment"
+        android:label="Chat messages"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.logistics.logix.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".ui.consignmentDetails.ConsignmentDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="@+id/btnSearch"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputContainerId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etContainerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Container ID"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:focusedByDefault="false"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDeploymentDestination"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputContainerId"
+            app:layout_constraintStart_toStartOf="@+id/textInputContainerId"
+            app:layout_constraintTop_toBottomOf="@+id/textInputContainerId">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDeploymentDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deployment destination"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputTypeOfGoodsTransported"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputDeploymentDestination"
+            app:layout_constraintStart_toStartOf="@+id/textInputDeploymentDestination"
+            app:layout_constraintTop_toBottomOf="@+id/textInputDeploymentDestination">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTypeOfGoodsTransported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type of goods transported"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textInputTypeOfGoodsTransported"
+            app:layout_constraintTop_toBottomOf="@+id/textInputTypeOfGoodsTransported">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:hint="Date required"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:focusable="false"
+                tools:ignore="KeyboardInaccessibleWidget,UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputFreightForwarderAssociated"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputDate"
+            app:layout_constraintStart_toStartOf="@+id/textInputDate"
+            app:layout_constraintTop_toBottomOf="@+id/textInputDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFreightForwarderAssociated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Freight forwarder associated"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSubmit"
+            app:layout_constraintStart_toStartOf="@+id/btnSubmit"
+            app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="@+id/textInputFreightForwarderAssociated"
+            app:layout_constraintTop_toBottomOf="@+id/textInputFreightForwarderAssociated" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

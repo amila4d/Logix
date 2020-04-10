@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="@+id/btnSearch"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPreferredCompany"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPreferredCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Preferred company name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:focusedByDefault="false"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSizeOfContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputPreferredCompany"
+            app:layout_constraintStart_toStartOf="@+id/textInputPreferredCompany"
+            app:layout_constraintTop_toBottomOf="@+id/textInputPreferredCompany">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSizeOfContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Size of container"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputGoodsType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputSizeOfContainer"
+            app:layout_constraintStart_toStartOf="@+id/textInputSizeOfContainer"
+            app:layout_constraintTop_toBottomOf="@+id/textInputSizeOfContainer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGoodsType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Types of good to be transport"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minWidth="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textInputGoodsType"
+            app:layout_constraintTop_toBottomOf="@+id/textInputGoodsType">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:hint="Date required"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:focusable="false"
+                tools:ignore="KeyboardInaccessibleWidget,UnusedAttribute" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSearch"
+            app:layout_constraintStart_toStartOf="@+id/btnSearch"
+            app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Search"
+            app:layout_constraintEnd_toEndOf="@+id/textInputDate"
+            app:layout_constraintTop_toBottomOf="@+id/textInputDate" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
