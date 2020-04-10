@@ -1,11 +1,7 @@
 package com.logistics.logix.ui.consignmentDetails
 
 import android.app.Application
-import android.view.Display
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.logistics.logix.database.LogixDb
 import com.logistics.logix.database.model.ConsignmentDetail
 import com.logistics.logix.database.model.Search
@@ -17,7 +13,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 import kotlin.coroutines.CoroutineContext
 
 class ConsignmentDetailsViewModel(application: Application) : AndroidViewModel(application) {

@@ -17,19 +17,21 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.*
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.iid.FirebaseInstanceId
+import com.logistics.logix.R
 import com.logistics.logix.database.ModelPreferences
 import com.logistics.logix.database.model.User
 import com.logistics.logix.ui.freightForwarderHome.FreightForwarderHomeFragment
 import com.logistics.logix.ui.login.LoginActivity
-import com.logistics.logix.ui.search.SearchFragment
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import org.koin.core.qualifier.named
-import com.logistics.logix.R
 
 
 class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedListener {
@@ -165,10 +167,6 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
         when (menuItem.itemId) {
             R.id.nav_home_freight_forwarder_home -> {
 
-                /*fm.beginTransaction().hide(active).show(homeFragment).commit()
-                active = homeFragment
-                setupActionBar("home", "", true)
-                return@onNavigationItemSelected true*/
                 if(user.userTypeId == 1) {
                     navController.navigate(R.id.nav_home_freight_forwarder_home)
                 }else if(user.userTypeId == 2){
@@ -185,10 +183,7 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
                 navController.navigate(R.id.nav_home_importer_exporter_home)
             }
             R.id.nav_search -> {
-                //fm.beginTransaction().hide(active).show(galleryFragment).commit()
-                //active = galleryFragment
-                //setupActionBar("home", "", true)
-                //return@onNavigationItemSelected true
+
 
                 if(user.userTypeId == 1) {
                     navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)

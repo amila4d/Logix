@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.logistics.logix.R
 import com.logistics.logix.database.ModelPreferences
-import com.logistics.logix.ui.shippingContainerCompanyHome.ConsigneeListAdapter
 import kotlinx.android.synthetic.main.fragment_chat.*
 import org.koin.android.ext.android.get
 

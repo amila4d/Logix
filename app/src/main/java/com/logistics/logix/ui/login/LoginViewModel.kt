@@ -2,7 +2,6 @@ package com.logistics.logix.ui.login
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
 import com.logistics.logix.database.LogixDb
 import com.logistics.logix.database.model.User
 import com.logistics.logix.database.repository.UserRepository

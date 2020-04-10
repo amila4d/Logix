@@ -3,7 +3,6 @@ package com.logistics.logix.ui
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.widget.RelativeLayout

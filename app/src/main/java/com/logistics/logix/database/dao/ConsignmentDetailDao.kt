@@ -1,6 +1,5 @@
 package com.logistics.logix.database.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.logistics.logix.database.model.ConsignmentDetail
 import com.logistics.logix.database.model.User

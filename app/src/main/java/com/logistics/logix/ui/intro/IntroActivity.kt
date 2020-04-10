@@ -26,16 +26,6 @@ class IntroActivity : AppIntro() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Note here that we DO NOT use setContentView();
-// Add your slide fragments here.
-// AppIntro will automatically generate the dots indicator and buttons.
-/*addSlide(firstFragment);
-        addSlide(secondFragment);
-        addSlide(thirdFragment);
-        addSlide(fourthFragment);*/
-// Instead of fragments, you can also use our default slide.
-// Just create a `SliderPage` and provide title, description, background and image.
-// AppIntro will do the rest.
 
         introViewModel =
             ViewModelProviders.of(this).get(IntroViewModel::class.java)

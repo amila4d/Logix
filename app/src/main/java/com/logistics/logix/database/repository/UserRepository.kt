@@ -1,8 +1,6 @@
 package com.logistics.logix.database.repository
 
 import androidx.annotation.WorkerThread
-import androidx.lifecycle.LiveData
-import androidx.room.Query
 import com.logistics.logix.database.dao.UserDao
 import com.logistics.logix.database.model.User
 
