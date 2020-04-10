@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,7 +37,7 @@ class ImporterExporterHomeFragment  : Fragment() {
         runBlocking {
             val searchList = importerExporterHomeViewModel.getAllSearches()
             if(searchList.isNotEmpty()) {
-                mAdapter = CompanyListAdapter(searchList.toMutableList())
+                mAdapter = CompanyListAdapter(searchList.toMutableList(), findNavController())
                 val mLayoutManager = LinearLayoutManager(context)
                 recyclerView.layoutManager = mLayoutManager
                 recyclerView.itemAnimator = DefaultItemAnimator()

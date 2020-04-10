@@ -102,6 +102,7 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
             navMenu.findItem(R.id.nav_consignment_details).isVisible = false
             navMenu.findItem(R.id.nav_home_importer_exporter_home).isVisible = true
             navMenu.findItem(R.id.nav_search).isVisible = false
+            navMenu.findItem(R.id.nav_notification).isVisible = false
             navGraph.startDestination = R.id.nav_home_importer_exporter_home
             appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.nav_home_importer_exporter_home,
