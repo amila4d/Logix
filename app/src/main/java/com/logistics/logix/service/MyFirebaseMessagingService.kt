@@ -12,11 +12,16 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.logistics.logix.R
+import com.logistics.logix.database.ModelPreferences
+import com.logistics.logix.database.model.Notification
 import com.logistics.logix.ui.MainActivity
+import com.logistics.logix.ui.splash.SplashActivity
+import org.koin.android.ext.android.get
 import java.util.*
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
+    private val modelPreferences: ModelPreferences = get()
     /**
      * Called when message is received.
      *
@@ -54,6 +59,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // Check if message contains a notification payload.
         remoteMessage.notification?.let {
             Log.d(TAG, "Message Notification Body: ${it.body}")
+            val noti = Notification(0,"",it.title!!,"",it.body!!,0)
+            modelPreferences.putObject("notification", noti)
             sendNotificationTest(it.title!!, it.body!!)
         }
 
@@ -82,9 +89,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         title: String,
         messageBody: String
     ) {
+
+        val notification = modelPreferences.getObject("notification", Notification::class.java)
         var intent = Intent()
         intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("title", title)
+        intent.putExtra("body", messageBody)
+        intent.putExtra("notification", "notification")
         val pendingIntent = PendingIntent.getActivity(
             this, 0 /* Request code */, intent,
             PendingIntent.FLAG_ONE_SHOT

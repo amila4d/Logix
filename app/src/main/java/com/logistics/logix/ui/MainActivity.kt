@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.drawerlayout.widget.DrawerLayout.DrawerListener
@@ -47,7 +48,8 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
     private lateinit var navView: NavigationView
     private lateinit var navController: NavController
     private lateinit var user: User
-    private val homeFragment: Fragment = FreightForwarderHomeFragment()
+    private lateinit var notificationTitle: String
+    private lateinit var notificationBody: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -146,6 +148,19 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
                 navUserEmail.text = user.email +" | "+user.userType
             }
         })
+
+        val notification = intent.getStringExtra("notification")
+        if(notification != null && notification == "notification") {
+            notificationTitle = intent.getStringExtra("title")
+            notificationBody = intent.getStringExtra("body")
+            setFragmentForNotification(notificationTitle, notificationBody)
+        }
+    }
+
+    private fun setFragmentForNotification(title: String, body: String){
+        var bundle = bundleOf("title" to title, "body" to body)
+        navController.navigate(R.id.nav_notification, bundle)
+
     }
 
     private fun initFireBase() {
@@ -167,15 +182,7 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
     override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
             R.id.nav_home_freight_forwarder_home -> {
-
-                if(user.userTypeId == 1) {
-                    navController.navigate(R.id.nav_home_freight_forwarder_home)
-                }else if(user.userTypeId == 2){
-                    navController.navigate(R.id.nav_home_shipping_container_company_home)
-                }else if(user.userTypeId == 3){
-                    navController.navigate(R.id.nav_home_importer_exporter_home)
-                }
-
+                navController.navigate(R.id.nav_home_freight_forwarder_home)
             }
             R.id.nav_home_shipping_container_company_home -> {
                 navController.navigate(R.id.nav_home_shipping_container_company_home)
@@ -184,57 +191,18 @@ class MainActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
                 navController.navigate(R.id.nav_home_importer_exporter_home)
             }
             R.id.nav_search -> {
-
-
-                if(user.userTypeId == 1) {
-                    navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)
-                }else if(user.userTypeId == 2){
-                    navController.popBackStack(R.id.nav_home_shipping_container_company_home, true)
-                }else if(user.userTypeId == 3){
-                    navController.popBackStack(R.id.nav_home_importer_exporter_home, true)
-                }
                 navController.navigate(R.id.nav_search)
-                //navController.popBackStack(R.id.nav_home, true)
-                //Toast.makeText(this, "Android Store", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_notification -> {
-                if(user.userTypeId == 1) {
-                    navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)
-                }else if(user.userTypeId == 2){
-                    navController.popBackStack(R.id.nav_home_shipping_container_company_home, true)
-                }else if(user.userTypeId == 3){
-                    navController.popBackStack(R.id.nav_home_importer_exporter_home, true)
-                }
                 navController.navigate(R.id.nav_notification)
             }
             R.id.nav_consignment_details ->{
-                if(user.userTypeId == 1) {
-                    navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)
-                }else if(user.userTypeId == 2){
-                    navController.popBackStack(R.id.nav_home_shipping_container_company_home, true)
-                }else if(user.userTypeId == 3){
-                    navController.popBackStack(R.id.nav_home_importer_exporter_home, true)
-                }
                 navController.navigate(R.id.nav_consignment_details)
             }
             R.id.nav_chat -> {
-                if(user.userTypeId == 1) {
-                    navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)
-                }else if(user.userTypeId == 2){
-                    navController.popBackStack(R.id.nav_home_shipping_container_company_home, true)
-                }else if(user.userTypeId == 3){
-                    navController.popBackStack(R.id.nav_home_importer_exporter_home, true)
-                }
                 navController.navigate(R.id.nav_chat)
             }
             R.id.nav_settings -> {
-                if(user.userTypeId == 1) {
-                    navController.popBackStack(R.id.nav_home_freight_forwarder_home, true)
-                }else if(user.userTypeId == 2){
-                    navController.popBackStack(R.id.nav_home_shipping_container_company_home, true)
-                }else if(user.userTypeId == 3){
-                    navController.popBackStack(R.id.nav_home_importer_exporter_home, true)
-                }
                 navController.navigate(R.id.nav_settings)
             }
             R.id.nav_signout -> {
